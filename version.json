@@ -1,0 +1,106 @@
+{
+    "version": "1.3.2",
+    "files": [
+      {
+        "path": "Addons for ABF.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF.rb"
+      },
+      {
+        "path": "Addons for ABF/move_attachment.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/move_attachment.rb"
+      },
+      {
+        "path": "Addons for ABF/furniture_properties.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/furniture_properties.rb"
+      },
+      {
+        "path": "Addons for ABF/Opensheet.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/Opensheet.rb"
+      },
+      {
+        "path": "Addons for ABF/Prefix.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/Prefix.rb"
+      },
+      {
+        "path": "Addons for ABF/Settings.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/Settings.rb"
+      },
+      {
+        "path": "Addons for ABF/Otvirset.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/Otvirset.rb"
+      },
+      {
+        "path": "Addons for ABF/vzvit.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/vzvit.rb"
+      },
+      {
+        "path": "Addons for ABF/ABFCleaner.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/ABFCleaner.rb"
+      },
+      {
+        "path": "Addons for ABF/Changelayer.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/Changelayer.rb"
+      },
+      {
+        "path": "Addons for ABF/Help.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/Help.rb"
+      },
+      {
+        "path": "Addons for ABF/Art.rb",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/Art.rb"
+      },
+      {
+        "path": "Addons for ABF/img/attachment_move.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/attachment_move.png"
+      },
+      {
+        "path": "Addons for ABF/img/furniture_properties.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/furniture_properties.png"
+      },
+      {
+        "path": "Addons for ABF/img/prefix.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/prefix.png"
+      },
+      {
+        "path": "Addons for ABF/img/otv.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/otv.png"
+      },
+      {
+        "path": "Addons for ABF/img/Open_sheet.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/Open_sheet.png"
+      },
+      {
+        "path": "Addons for ABF/img/settings.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/settings.png"
+      },
+      {
+        "path": "Addons for ABF/img/buttons/add.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/add.png"
+      },
+      {
+        "path": "Addons for ABF/img/buttons/del.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/del.png"
+      },
+      {
+        "path": "Addons for ABF/img/buttons/exp.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/exp.png"
+      },
+      {
+        "path": "Addons for ABF/img/buttons/import.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/import.png"
+      },
+      {
+        "path": "Addons for ABF/img/buttons/refresh.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/refresh.png"
+      },
+      {
+        "path": "Addons for ABF/img/buttons/save.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/save.png"
+      },
+      {
+        "path": "Addons for ABF/img/buttons/save_viyar.png",
+        "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/save_viyar.png"
+      }
+    
+    ]
+  }
