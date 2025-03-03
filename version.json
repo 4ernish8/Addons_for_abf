@@ -1,5 +1,5 @@
 {
-  "version": "1.3.2",
+  "version": "1.3.3",
   "files": [
     {
       "path": "Addons for ABF.rb",
@@ -100,7 +100,10 @@
     {
       "path": "Addons for ABF/img/buttons/save_viyar.png",
       "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/save_viyar.png"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/filter.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/filter.png"
     }
-
   ]
 }
