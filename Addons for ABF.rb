@@ -7,15 +7,17 @@ require 'open-uri'
 module ABFAddons
 
   # --- Константи ---
-  CURRENT_VERSION = "1.4.0"  # !!! Поточна версія !!!
+  CURRENT_VERSION = "1.4.1"  # !!! Поточна версія !!!
   VERSION_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/version.json" # URL version.json
+  CHANGELOG_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/changelog.json" # URL changelog.json
   PLUGIN_FOLDER = File.join(Sketchup.find_support_file("Plugins")) # Вірний шлях до Plugins
   CHECKED_FOR_UPDATES = false # Додаємо флаг перевірки оновлень
 
   # --- Перелік файлів які не чіпаємо ---
   FILES_TO_SKIP = [
     "Addons for ABF/settings.json",
-    "Addons for ABF/prices.json"
+    "Addons for ABF/prices.json",
+    "Addons for ABF/user.json"
   ].freeze
 
   # --- Завантаження файлів плагіну (.rbe или .rb) ---
@@ -26,11 +28,11 @@ module ABFAddons
     begin
       if File.exist?(rbe_path)
         Sketchup.load(rbe_path) # Завантажуємо .rbe
-        puts "Loaded: #{rbe_path}" 
+        puts "Loaded: #{rbe_path}"
         return true
       elsif File.exist?(rb_path)
         load rb_path # Завантажуємо.rb (якщо немає .rbe)
-        puts "Loaded: #{rb_path}"  
+        puts "Loaded: #{rb_path}"
         return true
       else
         UI.messagebox("ERROR: File not found: #{filename}.rb or #{filename}.rbe")
@@ -41,6 +43,7 @@ module ABFAddons
       return false
     end
   end
+
 
   # --- Перефірка оновленнь ---
   def self.check_for_updates
@@ -69,7 +72,7 @@ module ABFAddons
     end
 
     # Встановлюваємо флаг якщо перевірка вже була
-     @checked_for_updates = true
+      @checked_for_updates = true
   end
 
   # --- Диалог (HTML) ---
@@ -80,8 +83,8 @@ module ABFAddons
         :preferences_key => "com.example.plugin.updatedialog", # Уникальний ключ
         :scrollable => false,
         :resizable => false,
-        :width => 300,
-        :height => 150,
+        :width => 350, # Increased width slightly
+        :height => 180, # Increased height slightly
         :left => 100,
         :top => 100,
         :min_width => 50,
@@ -123,11 +126,19 @@ module ABFAddons
             font-size: 16px;
           }
           button:hover { background-color: #2980b9; }
+        .changelog-link {
+          margin-top: 10px;
+          color: #3498db;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .changelog-link:hover { text-decoration: underline; }
       </style>
     </head>
     <body>
       <div class="container">
         <p>Знайдена нова версія: #{new_version}</p>
+        <a class="changelog-link" onclick="sketchup.show_changelog()">Зміни в версії</a>
         <div class="button-container">
             <button onclick="sketchup.on_update()">Оновити</button>
             <button onclick="sketchup.on_close()">Закрити</button>
@@ -147,8 +158,55 @@ module ABFAddons
       dialog.close
     end
 
+    dialog.add_action_callback("show_changelog") do |_action_context|
+      show_changelog
+    end
+
     dialog.show
   end
+
+
+  # --- Функція для показу changelog ---
+  def self.show_changelog
+      begin
+        uri = URI(CHANGELOG_JSON_URL)
+        response = Net::HTTP.get(uri)
+        changelog_data = JSON.parse(response)
+
+        # Створюємо HTML-сторінку для відображення changelog
+        html_content = "<h1>Історія змін</h1>"
+        changelog_data.each do |version, changes|
+          html_content += "<h2>Версія #{version}</h2><ul>"
+          changes.each do |change|
+            html_content += "<li>#{change}</li>"
+          end
+          html_content += "</ul>"
+        end
+
+        # Створюємо і показуємо діалог з changelog
+        changelog_dialog = UI::HtmlDialog.new(
+          {
+            :dialog_title => "Addons for ABF - Історія змін",
+            :preferences_key => "com.example.plugin.changelog",
+            :scrollable => true,
+            :resizable => true,
+            :width => 600,
+            :height => 400,
+            :left => 200,
+            :top => 200,
+            :style => UI::HtmlDialog::STYLE_DIALOG
+          }
+        )
+        changelog_dialog.set_html(html_content)
+        changelog_dialog.show
+
+
+      rescue StandardError => e
+        UI.messagebox("Помилка при завантаженні changelog: #{e.message}")
+      end
+  end
+
+
 
   # --- Функція встановлення оновлення ---
   def self.install_update(data)
@@ -180,6 +238,8 @@ module ABFAddons
     end
   end
 
+
+
     unless file_loaded?(__FILE__)
     # --- Меню ---
     submenu = UI.menu("Extensions").add_submenu("Addons for ABF")
@@ -193,9 +253,11 @@ module ABFAddons
     submenu.add_item("Редагувати отвір") { Otvirset.run }
     submenu.add_item("Видалити/змінити номер ABF") { ABFCleaner.run }
     submenu.add_item("Відкрити таблицю") { Opensheet.run }
+    submenu.add_item("Деталювання") { Detaluvanna.run }
     submenu.add_item("Налаштування") { Settings.run }
     submenu.add_item("Інструкція") { Help.open_help_dialog }
     submenu.add_item("Перевірити оновлення") { check_for_updates }
+   
 
     toolbar = UI::Toolbar.new "Addons for ABF"
 
@@ -236,6 +298,12 @@ module ABFAddons
     cmd.tooltip = "Відкрити таблицю"
     toolbar.add_item cmd
 
+    cmd = UI::Command.new("Деталювання") { Detaluvanna.run }
+    cmd.small_icon = "Addons for ABF/img/det.png"
+    cmd.large_icon = "Addons for ABF/img/det.png"
+    cmd.tooltip = "Налаштування"
+    toolbar.add_item cmd
+
     cmd = UI::Command.new("Налаштування") { Settings.run }
     cmd.small_icon = "Addons for ABF/img/settings.png"
     cmd.large_icon = "Addons for ABF/img/settings.png"
@@ -251,9 +319,9 @@ module ABFAddons
         ext = SketchupExtension.new(
           plugin_name,
           if File.exist?(File.join(PLUGIN_FOLDER, "Addons for ABF.rbe"))
-              File.join(PLUGIN_FOLDER, "Addons for ABF.rbe")
+            File.join(PLUGIN_FOLDER, "Addons for ABF.rbe")
           else
-              File.join(PLUGIN_FOLDER, "Addons for ABF.rb")
+            File.join(PLUGIN_FOLDER, "Addons for ABF.rb")
           end
         )
 
@@ -277,12 +345,13 @@ module ABFAddons
       'ABFCleaner',
       'Changelayer',
       'Help',
-      'Art'
+      'Art',
+      'detal'
     ]
     files.each do |file|
       load_plugin_file(file)
     end
-        # --- Запускаємо таймер оновлення при запуску ---
+      # --- Запускаємо таймер оновлення при запуску ---
     UI.start_timer(40, false) { ABFAddons.check_for_updates }
   end
 end
