@@ -16,8 +16,8 @@ module ABFAddons
   # --- Перелік файлів які не чіпаємо ---
   FILES_TO_SKIP = [
     "Addons for ABF/settings.json",
-    "Addons for ABF/prices.json",
-    "Addons for ABF/user.json"
+    "Addons for ABF/prices.json"
+    #"Addons for ABF/user.json"
   ].freeze
 
   # --- Завантаження файлів плагіну (.rbe или .rb) ---
