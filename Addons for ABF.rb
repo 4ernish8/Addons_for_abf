@@ -7,7 +7,7 @@ require 'open-uri'
 module ABFAddons
 
   # --- Константи ---
-  CURRENT_VERSION = "1.4.1"  # !!! Поточна версія !!!
+  CURRENT_VERSION = "1.4.2"  # !!! Поточна версія !!!
   VERSION_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/version.json" # URL version.json
   CHANGELOG_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/changelog.json" # URL changelog.json
   PLUGIN_FOLDER = File.join(Sketchup.find_support_file("Plugins")) # Вірний шлях до Plugins
@@ -16,8 +16,8 @@ module ABFAddons
   # --- Перелік файлів які не чіпаємо ---
   FILES_TO_SKIP = [
     "Addons for ABF/settings.json",
-    "Addons for ABF/prices.json"
-    #"Addons for ABF/user.json"
+    "Addons for ABF/prices.json",
+    "Addons for ABF/user.json"
   ].freeze
 
   # --- Завантаження файлів плагіну (.rbe или .rb) ---
@@ -244,7 +244,6 @@ module ABFAddons
     # --- Меню ---
     submenu = UI.menu("Extensions").add_submenu("Addons for ABF")
     submenu.add_item("Перенос кріплення") do
-      Vzvit.run
       Changelayer.run
       MoveAttachment.run
     end
@@ -252,17 +251,18 @@ module ABFAddons
     submenu.add_item("Додати префікс") { Prefixx.run }
     submenu.add_item("Редагувати отвір") { Otvirset.run }
     submenu.add_item("Видалити/змінити номер ABF") { ABFCleaner.run }
-    submenu.add_item("Відкрити таблицю") { Opensheet.run }
+    submenu.add_item("Відкрити таблицю") do
+      Vzvit.run  
+      Opensheet.run
+      end
     submenu.add_item("Деталювання") { Detaluvanna.run }
     submenu.add_item("Налаштування") { Settings.run }
     submenu.add_item("Інструкція") { Help.open_help_dialog }
     submenu.add_item("Перевірити оновлення") { check_for_updates }
-   
 
     toolbar = UI::Toolbar.new "Addons for ABF"
 
     cmd = UI::Command.new("Перенос кріплення") do
-      Vzvit.run
       Changelayer.run
       MoveAttachment.run
     end
@@ -291,6 +291,7 @@ module ABFAddons
 
     cmd = UI::Command.new("Відкрити таблицю") do
       Art.run
+      Vzvit.run
       Opensheet.run
     end
     cmd.small_icon = "Addons for ABF/img/Open_sheet.png"
@@ -301,7 +302,7 @@ module ABFAddons
     cmd = UI::Command.new("Деталювання") { Detaluvanna.run }
     cmd.small_icon = "Addons for ABF/img/det.png"
     cmd.large_icon = "Addons for ABF/img/det.png"
-    cmd.tooltip = "Налаштування"
+    cmd.tooltip = "Деталювання"
     toolbar.add_item cmd
 
     cmd = UI::Command.new("Налаштування") { Settings.run }
