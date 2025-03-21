@@ -1,5 +1,5 @@
 {
-  "version": "1.4.2",
+  "version": "1.4.3",
   "files": [
     {
       "path": "Addons for ABF.rb",
@@ -112,6 +112,10 @@
     {
       "path": "Addons for ABF/user.json",
       "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/user.json"
+    },
+    {
+      "path": "Addons for ABF/Fonts.json",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/Fonts.json"
     }
 
   ]

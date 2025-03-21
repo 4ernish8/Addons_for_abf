@@ -7,7 +7,7 @@ require 'open-uri'
 module ABFAddons
 
   # --- Константи ---
-  CURRENT_VERSION = "1.4.2"  # !!! Поточна версія !!!
+  CURRENT_VERSION = "1.4.3"  # !!! Поточна версія !!!
   VERSION_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/version.json" # URL version.json
   CHANGELOG_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/changelog.json" # URL changelog.json
   PLUGIN_FOLDER = File.join(Sketchup.find_support_file("Plugins")) # Вірний шлях до Plugins
