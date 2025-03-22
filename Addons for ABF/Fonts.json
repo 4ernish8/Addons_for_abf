@@ -1,0 +1,76 @@
+{
+  "fonts": [
+    {
+      "name": "Arsenal",
+      "family": "Arsenal",
+      "url": "https://fonts.gstatic.com/s/arsenal/v5/wXKrE3kQtZQ4pF3D51jcBw.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "Balsamiq Sans",
+      "family": "Balsamiq Sans",
+      "url": "https://fonts.gstatic.com/s/balsamiqsans/v7/P5sEzZiAbNrN8SB3lQQX7PqZ-IEIF&7Ptjx8DqsyAA.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "Caveat",
+      "family": "Caveat",
+      "url": "https://fonts.gstatic.com/s/caveat/v10/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIWpZA.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "IBM Plex Sans",
+      "family": "IBM Plex Sans",
+      "url": "https://fonts.gstatic.com/s/ibmplexsans/v8/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdP3pBms.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "Inter",
+      "family": "Inter",
+      "url": "https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "Montserrat",
+      "family": "Montserrat",
+      "url": "https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "Noto Sans",
+      "family": "Noto Sans",
+      "url": "https://fonts.gstatic.com/s/notosans/v11/o-0IIpQlx3QUlC5A4PNr5TRA.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "Open Sans",
+      "family": "Open Sans",
+      "url": "https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "PT Sans Narrow",
+      "family": "PT Sans Narrow",
+      "url": "https://fonts.gstatic.com/s/ptsansnarrow/v12/BngRUXNadjH0qYEzV7ab-oWlsbCGwR2oefDo.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "Puppies Play",
+      "family": "Puppies Play",
+      "url": "https://fonts.gstatic.com/s/puppiesplay/v5/wlpTgPs7JAMi9LK0EwRacUFERE5F792L.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "Tektur",
+      "family": "Tektur",
+      "url": "https://fonts.gstatic.com/s/tektur/v1/XoHN2YHtS9eRU0Nmip3ILrB93nMJRQM.woff2",
+      "format": "woff2"
+    },
+    {
+      "name": "Ubuntu",
+      "family": "Ubuntu",
+      "url": "https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw72.woff2",
+      "format": "woff2"
+    }
+  ]
+}
