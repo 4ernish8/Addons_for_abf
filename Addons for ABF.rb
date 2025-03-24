@@ -6,11 +6,10 @@ require 'open-uri'
 
 module ABFAddons
 
-  # --- Константи ---
-  CURRENT_VERSION = "1.4.3"  # !!! Поточна версія !!!
-  VERSION_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/version.json" # URL version.json
-  CHANGELOG_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/changelog.json" # URL changelog.json
-  PLUGIN_FOLDER = File.join(Sketchup.find_support_file("Plugins")) # Вірний шлях до Plugins
+  CURRENT_VERSION = "1.4.4" 
+  VERSION_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/version.json" 
+  CHANGELOG_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/changelog.json"
+  PLUGIN_FOLDER = File.join(Sketchup.find_support_file("Plugins")) 
   CHECKED_FOR_UPDATES = false # Додаємо флаг перевірки оновлень
 
   # --- Перелік файлів які не чіпаємо ---
@@ -83,8 +82,8 @@ module ABFAddons
         :preferences_key => "com.example.plugin.updatedialog", # Уникальний ключ
         :scrollable => false,
         :resizable => false,
-        :width => 350, # Increased width slightly
-        :height => 180, # Increased height slightly
+        :width => 350,
+        :height => 180,
         :left => 100,
         :top => 100,
         :min_width => 50,
@@ -165,15 +164,13 @@ module ABFAddons
     dialog.show
   end
 
-
-  # --- Функція для показу changelog ---
   def self.show_changelog
       begin
         uri = URI(CHANGELOG_JSON_URL)
         response = Net::HTTP.get(uri)
         changelog_data = JSON.parse(response)
 
-        # Створюємо HTML-сторінку для відображення changelog
+        #  changelog
         html_content = "<h1>Історія змін</h1>"
         changelog_data.each do |version, changes|
           html_content += "<h2>Версія #{version}</h2><ul>"
@@ -183,7 +180,6 @@ module ABFAddons
           html_content += "</ul>"
         end
 
-        # Створюємо і показуємо діалог з changelog
         changelog_dialog = UI::HtmlDialog.new(
           {
             :dialog_title => "Addons for ABF - Історія змін",
@@ -206,9 +202,7 @@ module ABFAddons
       end
   end
 
-
-
-  # --- Функція встановлення оновлення ---
+  # Оновлення
   def self.install_update(data)
     begin
       data['files'].each do |file_info|

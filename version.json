@@ -1,5 +1,5 @@
 {
-  "version": "1.4.3",
+  "version": "1.4.4",
   "files": [
     {
       "path": "Addons for ABF.rb",
@@ -116,6 +116,14 @@
     {
       "path": "Addons for ABF/Fonts.json",
       "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/Fonts.json"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/dod.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/dod.png"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/vyd.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/vyd.png"
     }
 
   ]
