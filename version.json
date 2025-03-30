@@ -1,5 +1,5 @@
 {
-  "version": "1.4.5",
+  "version": "1.4.6",
   "files": [
     {
       "path": "Addons for ABF.rb",
@@ -128,6 +128,10 @@
     {
       "path": "Addons for ABF/img/buttons/list.png",
       "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/list.png"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/filter.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/filter.png"
     }
 
   ]
