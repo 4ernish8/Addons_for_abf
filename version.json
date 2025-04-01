@@ -1,5 +1,5 @@
 {
-  "version": "1.4.6",
+  "version": "1.4.7",
   "files": [
     {
       "path": "Addons for ABF.rb",
@@ -132,6 +132,14 @@
     {
       "path": "Addons for ABF/img/buttons/filter.png",
       "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/filter.png"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/mitka.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/mitka.png"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/smartfilter.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/smartfilter.png"
     }
 
   ]
