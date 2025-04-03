@@ -1,5 +1,5 @@
 {
-  "version": "1.4.7",
+  "version": "1.4.8",
   "files": [
     {
       "path": "Addons for ABF.rb",
@@ -140,6 +140,18 @@
     {
       "path": "Addons for ABF/img/buttons/smartfilter.png",
       "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/smartfilter.png"
+    },
+    {
+      "path": "Addons for ABF/furniture.rbe",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/furniture.rbe"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/enter.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/enter.png"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/del1.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/del1.png"
     }
 
   ]

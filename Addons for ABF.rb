@@ -6,7 +6,7 @@ require 'open-uri'
 
 module ABFAddons
 
-  CURRENT_VERSION = "1.4.7" 
+  CURRENT_VERSION = "1.4.8" 
   VERSION_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/version.json" 
   CHANGELOG_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/changelog.json"
   PLUGIN_FOLDER = File.join(Sketchup.find_support_file("Plugins")) 
@@ -251,9 +251,9 @@ module ABFAddons
       end
     submenu.add_item("Деталювання") { Detaluvanna.run }
     submenu.add_item("Налаштування") { Settings.run }
+    submenu.add_item("Заміна фурнітури") { Furniture.run }
     submenu.add_item("Інструкція") { Help.open_help_dialog }
     submenu.add_item("Перевірити оновлення") { check_for_updates }
-
     toolbar = UI::Toolbar.new "Addons for ABF"
 
     cmd = UI::Command.new("Перенос кріплення") do
@@ -341,7 +341,8 @@ module ABFAddons
       'Changelayer',
       'Help',
       'Art',
-      'detal'
+      'detal',
+      'furniture'
     ]
     files.each do |file|
       load_plugin_file(file)
