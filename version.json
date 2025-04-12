@@ -1,5 +1,5 @@
 {
-  "version": "1.4.8",
+  "version": "1.4.9",
   "files": [
     {
       "path": "Addons for ABF.rb",
@@ -156,6 +156,22 @@
     {
       "path": "Addons for ABF/img/buttons/edit.png",
       "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/edit.png"
+    },
+    {
+      "path": "Addons for ABF/Priceedit.rbe",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/Priceedit.rbe"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/add1.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/add1.png"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/del1.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/del1.png"
+    },
+    {
+      "path": "Addons for ABF/img/buttons/list1.png",
+      "url": "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/Addons%20for%20ABF/img/buttons/list1.png"
     }
 
   ]

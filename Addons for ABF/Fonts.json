@@ -71,6 +71,12 @@
       "family": "Ubuntu",
       "url": "https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw72.woff2",
       "format": "woff2"
+    },
+    {
+      "name": "Lobster",
+      "family": "Lobster",
+      "url": "https://fonts.gstatic.com/s/lobster/v30/neILzCirqoswsqX9zo-mM5Ez.woff2",
+      "format": "woff2"
     }
   ]
 }

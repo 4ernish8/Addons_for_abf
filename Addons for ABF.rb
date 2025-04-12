@@ -6,7 +6,7 @@ require 'open-uri'
 
 module ABFAddons
 
-  CURRENT_VERSION = "1.4.8" 
+  CURRENT_VERSION = "1.4.9" 
   VERSION_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/version.json" 
   CHANGELOG_JSON_URL = "https://raw.githubusercontent.com/4ernish8/Addons_for_abf/main/changelog.json"
   PLUGIN_FOLDER = File.join(Sketchup.find_support_file("Plugins")) 
@@ -16,7 +16,9 @@ module ABFAddons
   FILES_TO_SKIP = [
     "Addons for ABF/settings.json",
     "Addons for ABF/prices.json",
-    "Addons for ABF/user.json"
+    "Addons for ABF/user.json",
+    "Addons for ABF/Fonts.json",
+    'Addons for ABF/furniture.json"
   ].freeze
 
   # --- Завантаження файлів плагіну (.rbe или .rb) ---
@@ -252,6 +254,7 @@ module ABFAddons
     submenu.add_item("Деталювання") { Detaluvanna.run }
     submenu.add_item("Налаштування") { Settings.run }
     submenu.add_item("Заміна фурнітури") { Furniture.run }
+    submenu.add_item("Редактор прайсу") { Priceedit.run }
     submenu.add_item("Інструкція") { Help.open_help_dialog }
     submenu.add_item("Перевірити оновлення") { check_for_updates }
     toolbar = UI::Toolbar.new "Addons for ABF"
@@ -342,7 +345,8 @@ module ABFAddons
       'Help',
       'Art',
       'detal',
-      'furniture'
+      'furniture',
+      'Priceedit'
     ]
     files.each do |file|
       load_plugin_file(file)
