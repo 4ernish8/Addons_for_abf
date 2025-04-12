@@ -16,9 +16,7 @@ module ABFAddons
   FILES_TO_SKIP = [
     "Addons for ABF/settings.json",
     "Addons for ABF/prices.json",
-    "Addons for ABF/user.json",
-    "Addons for ABF/Fonts.json",
-    'Addons for ABF/furniture.json"
+    "Addons for ABF/user.json"
   ].freeze
 
   # --- Завантаження файлів плагіну (.rbe или .rb) ---
@@ -254,7 +252,6 @@ module ABFAddons
     submenu.add_item("Деталювання") { Detaluvanna.run }
     submenu.add_item("Налаштування") { Settings.run }
     submenu.add_item("Заміна фурнітури") { Furniture.run }
-    submenu.add_item("Редактор прайсу") { Priceedit.run }
     submenu.add_item("Інструкція") { Help.open_help_dialog }
     submenu.add_item("Перевірити оновлення") { check_for_updates }
     toolbar = UI::Toolbar.new "Addons for ABF"
