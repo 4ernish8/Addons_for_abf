@@ -251,6 +251,7 @@ module ABFAddons
       end
     submenu.add_item("Деталювання") { Detaluvanna.run }
     submenu.add_item("Налаштування") { Settings.run }
+    submenu.add_item("Редактор прайсу") { Priceedit.run } 
     submenu.add_item("Заміна фурнітури") { Furniture.run }
     submenu.add_item("Інструкція") { Help.open_help_dialog }
     submenu.add_item("Перевірити оновлення") { check_for_updates }
